@@ -232,7 +232,7 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 function getArtistByIndex(array, i) {
   return `the artist at index ${array[i].id} is ${artists[i].name}`
 }
-console.log(getArtistByIndex(artists,0));
+
 
 
 
@@ -245,9 +245,17 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s() {
+function get20s(array){
   
-}
+  const yearsAlive = [];
+  for (let i = 0; i < array.length; i++){
+     if(array[i].years > "1900"){
+       yearsAlive.push(array[i].name);
+     }
+   }
+   return yearsAlive;
+ }
+console.log(get20s(artists));
 
 
 
@@ -271,7 +279,7 @@ For example, if removeArtist is invoked with the artists array and the number 0,
  }
 
 
- console.log(removeArtist(artists, 0))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -303,7 +311,7 @@ function addArtist(array){
    
  }
 
- console.log(addArtist(artists));
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -322,7 +330,7 @@ function lotsOfArt(array){
    return options;
  }
 
- console.log(lotsOfArt(artists));
+
 
 /* ***** END OF TASKS ***** */
 
